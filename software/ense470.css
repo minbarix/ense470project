@@ -1,0 +1,51 @@
+html{
+    /*background: lightgrey;
+    background: -webkit-linear-gradient(left top,#000033, #00cc99);
+    background: -o-linear-gradient(bottom right, #000033, #00cc99);
+    background: -moz-linear-gradient(bottom right,#000033, #00cc99);
+    background: linear-gradient(to bottom right, #000033, #00cc99);
+    */
+    background: lightgrey;
+    background: linear-gradient(to bottom right, #000033,#00cc99) !important;
+    color: white;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    height: 100%;
+    padding-top: 30px;
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.brand{
+    color: white !important;
+    font-size: 40px;
+    text-align: left;
+    font-style: bold;
+    font-family: "Verdana", sans-serif;
+    border-bottom-style: solid;
+    border-color: white;
+    border-width: 5px;
+    padding-bottom: 20px;
+}
+
+body{
+    background: rgba(1,1,1,0) !important; 
+}
+
+h3{
+    color: white !important;
+}
+
+.pills{
+    color: white;
+}
+
+.comment{
+    background:rgba(1,1,1,0.3);
+    border: 2px solid white;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+}
