@@ -1,0 +1,21 @@
+CREATE TABLE ense470software(
+	softwarename VARCHAR(255) NOT NULL PRIMARY KEY,
+);
+
+CREATE TABLE ense470memberships(
+	softwarename VARCHAR(255) NOT NULL,
+	approvername VARCHAR(255) NOT NULL,
+	FOREIGN KEY (softwarename) REFERENCES ense470software (softwarename) ON DELETE RESTRICT ON UPDATE CASCADE,
+	FOREIGN KEY (approvername) REFERENCES ense470approver (approvername) ON DELETE RESTRICT ON UPDATE CASCADE,
+	PRIMARY KEY (softwarename, approvername)
+);
+
+CREATE TABLE ense470approver(
+	approvername VARCHAR(255) NOT NULL PRIMARY KEY,
+	email VARCHAR(255),
+	phone INT(16),	
+);
+
+CREATE TABLE ense470acronym(
+	abb VARCHAR(6) NOT NULL PRIMARY KEY
+);
