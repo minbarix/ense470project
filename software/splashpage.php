@@ -5,13 +5,14 @@
 
 <body>
     <header class="brand"> HELL Software</header>
+    <header>User Login</header>
+<form action="login.php" id="login" method="post">
+<table>
 
-<form>
-        <br><br><br>
-        <input type="radio" name="perspective" value="user" checked>User View<br>
-        <input type="radio" name="perspective" value="approver">Approver View<br>
-        <input type="radio" name="perspective" value="analyst">Analyst View<br>
-        <input type="submit" value="Enter View">
+    <tr><td></td></tr><tr><td>Username: </td><td> <input type="text" name="user" size="30" /> </td></tr>
+    <tr><td>Password: </td><td> <input type="password" name="pswd" size="30" /> </td></tr><tr><td></td></tr>
+</table>
+        <input type="submit" name="Login" value="Login">
 </form>
 </body>
 
