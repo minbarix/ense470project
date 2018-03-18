@@ -13,6 +13,7 @@ session_start();
   
     if($result->num_rows > 0){
         $row = $result->fetch_assoc();
+        $_SESSION["currUsername"] = $username;
 
         if($row["tier"] == 1){
             header("Location: usersplash.php");
