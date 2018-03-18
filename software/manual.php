@@ -4,7 +4,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 $un = $_POST["username"];
-$psw = $_POST["software"];
+$sw = $_POST["software"];
 
 
 $sql = "INSERT INTO ense470request (owner, software, isapproved, isverified, iscompleted) VALUES ('$un','$sw','1','1','1')"; 

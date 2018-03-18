@@ -34,7 +34,7 @@ elseif($_SESSION["currTier"] != 3){
       <a class="navbar-brand" href="#">Choose Option:</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="analystsplash.php">Home</a></li>
+      <li class="active"><a href="analystsplash.php">Pending Requests</a></li>
       <li><a href="approvedlist.php">Completed Requests</a></li>
       <li><a href="analystenter.php">Manual Entry</a></li>
       <li><a href="#">Page 3</a></li>
