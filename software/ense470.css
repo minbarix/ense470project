@@ -29,6 +29,14 @@ html{
     border-width: 5px;
     padding-bottom: 20px;
 }
+.brand2{
+    color: white !important;
+    font-size: 40px;
+    text-align: left;
+    font-style: bold;
+    font-family: "Verdana", sans-serif;
+
+}
 
 body{
     background: rgba(1,1,1,0) !important; 
