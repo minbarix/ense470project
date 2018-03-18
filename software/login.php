@@ -16,12 +16,15 @@ session_start();
 
         if($row["tier"] == 1){
             header("Location: usersplash.php");
+            $_SESSION["currTier"] = $row["tier"];
         }
         elseif($row["tier"] == 2){
             header("Location: approversplash.php");
+            $_SESSION["currTier"] = $row["tier"];
         }
         elseif($row["tier"] == 3){
             header("Location: analystsplash.php");
+            $_SESSION["currTier"] = $row["tier"];
         }
     }
     else{

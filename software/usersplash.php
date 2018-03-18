@@ -1,3 +1,16 @@
+<?php
+session_start();
+if($_SESSION["currTier"] == 2){
+    header("Location: approversplash.php");
+}
+elseif($_SESSION["currTier"] == 3){
+    header("Location: analystsplash.php");
+}
+elseif($_SESSION["currTier"] != 1){
+    header("Location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head><link rel="stylesheet" type="text/css" href="ense470.css">
