@@ -9,6 +9,18 @@ elseif($_SESSION["currTier"] == 3){
 elseif($_SESSION["currTier"] != 2){
     header("Location: login.php");
 }
+
+
+
+$conn = new mysqli("localhost", "thoma26s", "008096", "thoma26s");
+    if($conn->connect_error){
+        die("connection failed: " . $conn->connect_error);
+    }
+    
+$tempuser = $_SESSION["currUsername"];
+$listquery = "SELECT requestnum FROM ense470request WHERE isapproved='0'";
+$listResult = $conn->query($listquery);
+
 ?>
 
 
@@ -38,6 +50,11 @@ elseif($_SESSION["currTier"] != 2){
     <li><a class="pills" href="#">Request 1</a></li>
     <li><a class="pills" href="#">Request 2</a></li>
     <li><a class="pills" data-toggle="modal" data-target="#myModal">Request 3</a></li>
+<?php    
+    while($listRow = $listResult->fetch_assoc()){
+        echo('<li><a class="pills" data-toggle="modal" data-target="#myModel">' . $_SESSION["currUsername"] . '</a></li>');
+    }
+?>
   </ul>
 </div>
 
