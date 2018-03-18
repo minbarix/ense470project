@@ -136,8 +136,6 @@ elseif($_SESSION["currTier"] != 3){
 
   </div>
 </div>
-
-<div><a href="approvedlist.php">View Completed Requests</div>
 </body>
 
 </html>

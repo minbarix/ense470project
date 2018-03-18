@@ -63,6 +63,13 @@ table{
     width:30%; 
     margin-left:35%; 
     margin-right:35%;
+    color: white;
+}
+
+#lesswide{
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
 }
 
 .error{

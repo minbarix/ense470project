@@ -21,3 +21,33 @@ function LoginForm(event){
         event.preventDefault();
     }
 }
+
+
+function ManualForm(event){ 
+        
+    var elements = event.currentTarget;
+
+    var a = elements[0].value;  //username
+    var b = elements[1].value;  //software name
+ 
+    
+    var result = true;    
+        
+    document.getElementById("username_msg").innerHTML ="";
+    document.getElementById("software_msg").innerHTML ="";
+
+    if(a==null || a==""){
+        document.getElementById("firstname_msg").innerHTML="Enter a Username";
+        result = false;
+    }
+
+    if(b==null || b==""){
+        document.getElementById("software_msg").innerHTML="Enter the software name";
+        result = false;
+    }
+	
+    if(result == false )
+        {    
+            event.preventDefault();
+        }
+}
