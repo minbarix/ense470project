@@ -16,11 +16,11 @@ $conn = new mysqli("localhost", "thoma26s", "008096", "thoma26s");
     if($conn->connect_error){
         die("connection failed: " . $conn->connect_error);
     }
-    
+
 $tempuser = $_SESSION["currUsername"];
 $listquery = "SELECT requestnum FROM ense470request WHERE isapproved='0'";
 $listResult = $conn->query($listquery);
-
+temp();
 ?>
 
 
@@ -52,14 +52,45 @@ $listResult = $conn->query($listquery);
     <li><a class="pills" data-toggle="modal" data-target="#myModal">Request 3</a></li>
 <?php    
     while($listRow = $listResult->fetch_assoc()){
-        echo('<li><a class="pills" data-toggle="modal" data-target="#myModel">' . $_SESSION["currUsername"] . '</a></li>');
+        echo('<li><a class="pills" data-toggle="modal" data-target="#' . $listRow["requestnum"] .'">' . $_SESSION["currUsername"] . '</a></li>');
     }
 ?>
   </ul>
 </div>
 
 
+<?php
+function temp(){
+while($listRow = $listResult->fetch_assoc()){
+echo('
 
+    <div id="' . $listRow["requestnum"] .'" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+    
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Request 3</h4>
+          </div>
+          <div class="modal-body">
+            <p>Request From: Tim</p>
+            <p>Software Requested: Web Utility Table</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#rejectmodal" data-dismiss="modal">Reject</button>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#approvemodal" data-dismiss="modal">Approve</button>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+
+');
+
+}
+}
+?>
 
 
 <!-- Modal -->
