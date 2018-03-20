@@ -1,5 +1,6 @@
 CREATE TABLE ense470software(
-	softwarename VARCHAR(255) NOT NULL PRIMARY KEY
+	softwarename VARCHAR(255) NOT NULL PRIMARY KEY,
+	abb VARCHAR(6)
 );
 
 CREATE TABLE ense470memberships(
@@ -16,9 +17,6 @@ CREATE TABLE ense470approver(
 	phone INT(16)	
 );
 
-CREATE TABLE ense470acronym(
-	abb VARCHAR(6) NOT NULL PRIMARY KEY
-);
 
 CREATE TABLE ense470request(
 	requestnum INT(8) NOT NULL AUTO_INCREMENT PRIMARY KEY,
