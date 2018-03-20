@@ -14,7 +14,7 @@ CREATE TABLE ense470memberships(
 CREATE TABLE ense470approver(
 	approvername VARCHAR(255) NOT NULL PRIMARY KEY,
 	email VARCHAR(255),
-	phone INT(16)	
+	phone BIGINT(16)	
 );
 
 
