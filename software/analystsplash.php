@@ -1,3 +1,16 @@
+<?php
+session_start();
+if($_SESSION["currTier"] == 1){
+    header("Location: usersplash.php");
+}
+elseif($_SESSION["currTier"] == 2){
+    header("Location: approversplash.php");
+}
+elseif($_SESSION["currTier"] != 3){
+    header("Location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head><link rel="stylesheet" type="text/css" href="ense470.css">
@@ -11,9 +24,23 @@
 <title>User Selection</title></head>
 
 <body>
-    <header class="brand"> HELL Software</header>
+    <header class="brand2"> HELL Software</header>
 
-<br><br><br>
+<br>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Choose Option:</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="analystsplash.php">Pending Requests</a></li>
+      <li><a href="approvedlist.php">Completed Requests</a></li>
+      <li><a href="analystenter.php">Manual Entry</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
 
 
 
@@ -109,8 +136,6 @@
 
   </div>
 </div>
-
-<div><a href="approvedlist.php">View Completed Requests</div>
 </body>
 
 </html>

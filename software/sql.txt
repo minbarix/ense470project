@@ -1,5 +1,5 @@
 CREATE TABLE ense470software(
-	softwarename VARCHAR(255) NOT NULL PRIMARY KEY,
+	softwarename VARCHAR(255) NOT NULL PRIMARY KEY
 );
 
 CREATE TABLE ense470memberships(
@@ -13,9 +13,31 @@ CREATE TABLE ense470memberships(
 CREATE TABLE ense470approver(
 	approvername VARCHAR(255) NOT NULL PRIMARY KEY,
 	email VARCHAR(255),
-	phone INT(16),	
+	phone INT(16)	
 );
 
 CREATE TABLE ense470acronym(
 	abb VARCHAR(6) NOT NULL PRIMARY KEY
 );
+
+CREATE TABLE ense470request(
+	requestnum INT(8) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	owner VARCHAR(255) REFERENCES ense470users(username),
+	software VARCHAR(255) REFERENCES ense470software(softwarename),
+	comments VARCHAR (1000),
+	isapproved TINYINT(1) DEFAULT '0',
+	isverified TINYINT(1) DEFAULT '0',
+	iscompleted TINYINT(1) DEFAULT '0'
+);
+
+CREATE TABLE ense470users(
+	username VARCHAR(255) NOT NULL PRIMARY KEY,
+	email VARCHAR(255) NOT NULL,
+	password VARCHAR(255) NOT NULL,
+	tier INT(2)
+);
+
+INSERT INTO ense470users (username, email, password, tier) VALUES ('usertest', 'user@hell.com','12345678','1');
+INSERT INTO ense470users (username, email, password, tier) VALUES ('approvertest', 'approver@hell.com','abc123','2');
+INSERT INTO ense470users (username, email, password, tier) VALUES ('analysttest', 'analyst@hell.com','securepassword','3');
+
