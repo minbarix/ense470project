@@ -1,0 +1,149 @@
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Abdomen Tissue and Analysis Tool', 'AT-AT');
+INSERT INTO ense470software (softwarename)
+VALUES ('Alterntive Sewage System');
+INSERT INTO ense470software (softwarename)
+VALUES ('Ambulance Schedule System');
+INSERT INTO ense470software (softwarename)
+VALUES ('Ambulance Supply System');
+INSERT INTO ense470software (softwarename)
+VALUES ('Biosphere Air and Gas Interpreter');
+INSERT INTO ense470software (softwarename)
+VALUES ('Care Manager');
+INSERT INTO ense470software (softwarename)
+VALUES ('Chronic Disease Management');
+INSERT INTO ense470software (softwarename)
+VALUES ('Cisco WebEx');
+INSERT INTO ense470software (softwarename)
+VALUES ('Cleaning Product Analyzer');
+INSERT INTO ense470software (softwarename)
+VALUES ('Clinical Admission Manager');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Clinical Data Repository', CDR);
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Data & Utility Heuristics', 'DUH');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Download Urgent Medical Backups', 'DUMB);
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Drug Profile Viewer', 'DPV');
+INSERT INTO ense470software (softwarename)
+VALUES ('eHealthChart');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Electronic Lab System Interpolator', 'ELSI);
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Electronic Medical Record(Viewer)', 'EMR');
+INSERT INTO ense470software (softwarename)
+VALUES ('Environmental Assessor Tool');
+INSERT INTO ense470software (softwarename)
+VALUES ('Environmental Home Manager');
+INSERT INTO ense470software (softwarename)
+VALUES ('eReferral');
+INSERT INTO ense470software (softwarename)
+VALUES ('Fast Family Finder');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Find a Doctor', 'FAD');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Fixed Orthodontics Medical Operations', 'FOMO');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Free MyQL Logger', 'FML');
+INSERT INTO ense470software (softwarename)
+VALUES ('Greenhouse Gas Analyzer');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Heart Ultrasound Heatmaps', 'HUH');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Heart, Abdomen, and Head Assessor', 'HAHA');
+INSERT INTO ense470software (softwarename)
+VALUES ('Homecare System');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Lab Information System', 'LIS');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Limited Operatin Liability', 'LOL');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('List of Transactions and Restrictions', 'LOTR);
+INSERT INTO ense470software (softwarename)
+VALUES ('Microstrategy');
+INSERT INTO ense470software (softwarename)
+VALUES ('myeHealth(Alberta, Sask and Manitoba');
+INSERT INTO ense470software (softwarename)
+VALUES ('myeHealth(BC)');
+INSERT INTO ense470software (softwarename)
+VALUES ('myeHealth(Maritimes)');
+INSERT INTO ense470software (softwarename)
+VALUES ('myeHealth(Ontario)');
+INSERT INTO ense470software (softwarename)
+VALUES ('myeHealth(Quebec)');
+INSERT INTO ense470software (softwarename)
+VALUES ('myeHealth(Territories)');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('National Ozone Observatory Bot', 'NOOB');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Netcare Occupation & Observation Base System', 'NOOBS');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Northern Ozone & Ocean Biome', 'NOOB');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Observation(Version 1)', 'OB1');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Opertaing Map and Gastrophy', 'OMG');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Original Record of Landscape and Yards', 'ORLY');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Patient Admitter Tool', 'PAT');
+INSERT INTO ense470software (softwarename)
+VALUES ('PharmaCare');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Pharmaceutical Information Program', 'PIP');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Picture Archive and Communication System', 'PACS');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Planetary Environmental Reference System', 'PERS');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Pollution Alerts Datamart', 'PAD');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Provider Coverage Viewer', 'PCV');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Provider Registry System', 'PRS');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Radiology Information System', 'RIS');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Relational Observation System Limited', 'ROFL');
+INSERT INTO ense470software (softwarename)
+VALUES ('Remote Health Checker');
+INSERT INTO ense470software (softwarename)
+VALUES ('Remote Stroke Checker');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Selected Analytical Methods', 'SAM');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Snowmed Analyzer System Extended Edition', 'SASEE');
+INSERT INTO ense470software (softwarename)
+VALUES ('Spillage Locator Tool');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Statistical Analysis System', 'SAS');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Statistical Package for Social Sciences', 'SPSS');
+INSERT INTO ense470software (softwarename)
+VALUES ('Storm Water Management');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Surigcal Information System', 'SIS');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Sustainable Xeriscaping', 'SuX');
+INSERT INTO ense470software (softwarename)
+VALUES ('TeleCare');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Total MAstering of Incisions', 'TMI');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Transcription Magic Interpreter', 'TMI');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Waste Electronic & Wireless Equipment', 'WEWE');
+INSERT INTO ense470software (softwarename)
+VALUES ('Waste Observation System');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Water and Land Data Observer', 'WALDO);
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Weather Analyzer Software System Unix Platform', 'WASSUP');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Weather and Ozone Observation Knoweledge Emulator Enterprise Edition', 'WOOKEEE');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('Web Utility Table', 'WUT');
+INSERT INTO ense470software (softwarename, abb)
+VALUES ('World Terrain & Forestry', 'WTF');
+
