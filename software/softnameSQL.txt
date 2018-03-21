@@ -19,7 +19,7 @@ VALUES ('Cleaning Product Analyzer');
 INSERT INTO ense470software (softwarename)
 VALUES ('Clinical Admission Manager');
 INSERT INTO ense470software (softwarename, abb)
-VALUES ('Clinical Data Repository', CDR);
+VALUES ('Clinical Data Repository', 'CDR');
 INSERT INTO ense470software (softwarename, abb)
 VALUES ('Data & Utility Heuristics', 'DUH');
 INSERT INTO ense470software (softwarename, abb)
@@ -59,7 +59,7 @@ VALUES ('Lab Information System', 'LIS');
 INSERT INTO ense470software (softwarename, abb)
 VALUES ('Limited Operatin Liability', 'LOL');
 INSERT INTO ense470software (softwarename, abb)
-VALUES ('List of Transactions and Restrictions', 'LOTR);
+VALUES ('List of Transactions and Restrictions', 'LOTR');
 INSERT INTO ense470software (softwarename)
 VALUES ('Microstrategy');
 INSERT INTO ense470software (softwarename)
@@ -137,7 +137,7 @@ VALUES ('Waste Electronic & Wireless Equipment', 'WEWE');
 INSERT INTO ense470software (softwarename)
 VALUES ('Waste Observation System');
 INSERT INTO ense470software (softwarename, abb)
-VALUES ('Water and Land Data Observer', 'WALDO);
+VALUES ('Water and Land Data Observer', 'WALDO');
 INSERT INTO ense470software (softwarename, abb)
 VALUES ('Weather Analyzer Software System Unix Platform', 'WASSUP');
 INSERT INTO ense470software (softwarename, abb)
