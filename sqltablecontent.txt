@@ -1,0 +1,190 @@
+
+
+
+
+
+
+
+
+ense470software table
+
+
++----------------------------------------------------------------------+--------+
+| softwarename                                                         | abb    |
++----------------------------------------------------------------------+--------+
+| Abdomen Tissue and Analysis Tool                                     | AT-AT  |
+| Alterntive Sewage System                                             | NULL   |
+| Ambulance Schedule System                                            | NULL   |
+| Ambulance Supply System                                              | NULL   |
+| Biosphere Air and Gas Interpreter                                    | NULL   |
+| Care Manager                                                         | NULL   |
+| Chronic Disease Management                                           | NULL   |
+| Cisco WebEx                                                          | NULL   |
+| Cleaning Product Analyzer                                            | NULL   |
+| Clinical Admission Manager                                           | NULL   |
+| Data & Utility Heuristics                                            | DUH    |
+| Electronic Medical Record(Viewer)                                    | EMR    |
+| Environmental Assessor Tool                                          | NULL   |
+| Environmental Home Manager                                           | NULL   |
+| eReferral                                                            | NULL   |
+| Fast Family Finder                                                   | NULL   |
+| Find a Doctor                                                        | FAD    |
+| Fixed Orthodontics Medical Operations                                | FOMO   |
+| Free MyQL Logger                                                     | FML    |
+| Greenhouse Gas Analyzer                                              | NULL   |
+| Heart Ultrasound Heatmaps                                            | HUH    |
+| Heart, Abdomen, and Head Assessor                                    | HAHA   |
+| Homecare System                                                      | NULL   |
+| Lab Information System                                               | LIS    |
+| Limited Operatin Liability                                           | LOL    |
+| Waste Electronic & Wireless Equipment                                | WEWE   |
+| Waste Observation System                                             | NULL   |
+| Clinical Data Repository                                             | CDR    |
+| Download Urgent Medical Backups                                      | DUMB   |
+| Drug Profile Viewer                                                  | DPV    |
+| eHealthChart                                                         | NULL   |
+| Electronic Lab System Interpolator                                   | ELSI   |
+| List of Transactions and Restrictions                                | LOTR   |
+| Microstrategy                                                        | NULL   |
+| myeHealth(Alberta, Sask and Manitoba                                 | NULL   |
+| myeHealth(BC)                                                        | NULL   |
+| myeHealth(Maritimes)                                                 | NULL   |
+| myeHealth(Ontario)                                                   | NULL   |
+| myeHealth(Quebec)                                                    | NULL   |
+| myeHealth(Territories)                                               | NULL   |
+| National Ozone Observatory Bot                                       | NOOB   |
+| Netcare Occupation & Observation Base System                         | NOOBS  |
+| Northern Ozone & Ocean Biome                                         | NOOB   |
+| Observation(Version 1)                                               | OB1    |
+| Opertaing Map and Gastrophy                                          | OMG    |
+| Original Record of Landscape and Yards                               | ORLY   |
+| Patient Admitter Tool                                                | PAT    |
+| PharmaCare                                                           | NULL   |
+| Pharmaceutical Information Program                                   | PIP    |
+| Picture Archive and Communication System                             | PACS   |
+| Planetary Environmental Reference System                             | PERS   |
+| Pollution Alerts Datamart                                            | PAD    |
+| Provider Coverage Viewer                                             | PCV    |
+| Provider Registry System                                             | PRS    |
+| Radiology Information System                                         | RIS    |
+| Relational Observation System Limited                                | ROFL   |
+| Remote Health Checker                                                | NULL   |
+| Remote Stroke Checker                                                | NULL   |
+| Selected Analytical Methods                                          | SAM    |
+| Snowmed Analyzer System Extended Edition                             | SASEE  |
+| Spillage Locator Tool                                                | NULL   |
+| Statistical Analysis System                                          | SAS    |
+| Statistical Package for Social Sciences                              | SPSS   |
+| Storm Water Management                                               | NULL   |
+| Surigcal Information System                                          | SIS    |
+| Sustainable Xeriscaping                                              | SuX    |
+| TeleCare                                                             | NULL   |
+| Total MAstering of Incisions                                         | TMI    |
+| Transcription Magic Interpreter                                      | TMI    |
+| Water and Land Data Observer                                         | WALDO  |
+| Weather Analyzer Software System Unix Platform                       | WASSUP |
+| Weather and Ozone Observation Knoweledge Emulator Enterprise Edition | WOOKEE |
+| Web Utility Table                                                    | WUT    |
+| World Terrain & Forestry                                             | WTF    |
++----------------------------------------------------------------------+--------+
+
+
+
+
+
+
+ense470users table
+
++--------------+-------------------+----------------+------+
+| username     | email             | password       | tier |
++--------------+-------------------+----------------+------+
+| usertest     | user@hell.com     | 12345678       |    1 |
+| approvertest | approver@hell.com | abc123         |    2 |
+| analysttest  | analyst@hell.com  | securepassword |    3 |
++--------------+-------------------+----------------+------+
+
+
+
+
+
+
+
+ense470approvers table
+
+
++------------------+-----------------------+------------+
+| approvername     | email                 | phone      |
++------------------+-----------------------+------------+
+| Al Dente         | aldente@hell.com      | 3064548769 |
+| Al Falfa         | alfalfa@hell.com      | 3064558770 |
+| Al Pacca         | alpacca@hell.com      | 3065559780 |
+| Alan Rench       | arench@hell.com       | 3064568910 |
+| Ally Katz        | allykatz@hell.com     | 3069385392 |
+| Amanda Huginkiss | ahugkiss@hell.com     | 3067419530 |
+| Anna Conda       | annaconda@hell.com    | 3065103925 |
+| Anna Nimmity     | animmity@hell.com     | 3062374210 |
+| Anne Thrax       | annethrax@hell.com    | 3063074521 |
+| Annita Job       | annitajob@hell.com    | 3068730876 |
+| Art A Choke      | artachoke@hell.com    | 3062063856 |
+| Art Dekko        | artdekko@hell.com     | 3064558712 |
+| Art Major        | artmajor@hell.com     | 3069129356 |
+| Barb Wyre        | BarbWyre@hell.com     | 3061473497 |
+| Benny Fitz       | bennyfitz@hell.com    | 3064025454 |
+| Biff Wellington  | bwellington@hell.com  | 3061227856 |
+| Brock Lee        | brocklee@hell.com     | 3068987890 |
+| Bud Light        | budlight@hell.com     | 3063331234 |
+| Bunsen Burner    | bburner@hell.com      | 3065651290 |
+| Chester Field    | chesterfield@hell.com | 3069991111 |
+| Claire Voyant    | clairevoyant@hell.com | 3064443333 |
+| Clay Potts       | claypotts@hell.com    | 3064563434 |
+| Crystal Ball     | crystalball@hell.com  | 3067678790 |
+| Derry Yare       | derryyare@hell.com    | 3064558771 |
+| Dot Matricks     | dotmatricks@hell.com  | 3064558772 |
+| Dr Chris P Bacon | pbacon@hell.com       | 3064558775 |
+| Dr Jed I Knight  | jediknight@hell.com   | 3067569789 |
+| Dyl Pickel       | dylpickel@hell.com    | 3065556464 |
+| Filet Minyon     | filetminyon@hell.com  | 3065456543 |
+| Frank Furter     | frankfurter@hell.com  | 3066567788 |
+| Gene Poole       | genepoole@hell.com    | 3067379900 |
+| Ginger Vitus     | gingervitus@hell.com  | 3067379898 |
+| Gladys Dunn      | gladysdunn@hell.com   | 3065436655 |
+| Goldie Locke     | goldielocke@hell.com  | 3064559880 |
+| Harry Beard      | harrybeard@hell.com   | 3065435432 |
+| Honey Potts      | honeypotts@hell.com   | 3067675420 |
+| Ida Claire       | idaclaire@hell.com    | 3067675421 |
+| Jack Uzzi        | jackuzzi@hell.com     | 3067675422 |
+| Justin Case      | justincase@hell.com   | 3067675423 |
+| Justin Thyme     | justinthyme@hell.com  | 3067675424 |
+| Kanye Kun        | kanyekun@hell.com     | 3067675425 |
+| Krystal Ball     | krystalball@hell.com  | 3067675426 |
+| Leah Tarde       | leadtarde@hell.com    | 3067675427 |
+| Les Wynan        | leswynan@hell.com     | 3067675428 |
+| Linda Hand       | lindahand@hell.com    | 3067675429 |
+| Lotta Noyes      | lottanoyes@hell.com   | 3067675430 |
+| Mason Jarr       | masonjarr@hell.com    | 3067675431 |
+| Mike Raffone     | mikeraffone@hell.com  | 3067675432 |
+| Neil Down        | neildown@hell.com     | 3067675433 |
+| Ollie Gark       | olliegark@hell.com    | 3067675434 |
+| Paige Turner     | paigeturner@hell.com  | 3067675435 |
+| Pea Pu           | peapu@hell.com        | 3067675436 |
+| Pete Moss        | petemoss@hell.com     | 3067675437 |
+| Polly Graff      | pollygraff@hell.com   | 3067675438 |
+| Robyn Banks      | robynbanks@hell.com   | 3067675439 |
+| Rocky Rhodes     | rockyrhodes@hell.com  | 3067675440 |
+| Rod Curtains     | rodcurtains@hell.com  | 3067675441 |
+| Rusty Foord      | rustyfoord@hell.com   | 3067675442 |
+| Sandy Beech      | sandybeech@hell.com   | 3067675443 |
+| Seymore Butts    | seymorebutts@hell.com | 3067675444 |
+| Sonny Day        | sonnyday@hell.com     | 3067675445 |
+| Stan Dupp        | standupp@hell.com     | 3067675446 |
+| Sue Flay         | sueflay@hell.com      | 3067675447 |
+| Sue Vlaki        | suevlaki@hell.com     | 3067675448 |
+| Tara Dactyl      | taradactyl@hell.com   | 3067675449 |
+| Tess Tamoni      | tesstamoni@hell.com   | 3067675450 |
+| Tom Foolery      | tomfoolery@hell.com   | 3067675451 |
+| Ty Kuhn          | tykuhn@hell.com       | 3067675452 |
+| Warren Peace     | warrenpeace@hell.com  | 3067675453 |
+| Wazziz Naime     | wazziznaime@hell.com  | 3067675454 |
+| Wil Doolittle    | wdoolittle@hell.com   | 3067675455 |
+| Will Tickelu     | willtickelu@hell.com  | 3067675456 |
++------------------+-----------------------+------------+
