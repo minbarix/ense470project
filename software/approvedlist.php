@@ -34,7 +34,6 @@ if(($_SESSION["currTier"] != 1) and ($_SESSION["currTier"] != 2) and ($_SESSION[
       <li><a href="analystsplash.php">Pending Requests</a></li>
       <li class="active"><a href="approvedlist.php">Completed Requests</a></li>
       <li><a href="analystenter.php">Manual Entry</a></li>
-      <li><a href="#">Page 3</a></li>
     </ul>
   </div>
 </nav>

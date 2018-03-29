@@ -9,6 +9,19 @@ elseif($_SESSION["currTier"] == 2){
 elseif($_SESSION["currTier"] != 3){
     header("Location: login.php");
 }
+
+$conn = new mysqli("localhost","thoma26s","008096","thoma26s");
+    if($conn->connect_error){
+        die("connection failed: " . $conn->connect_error);
+    }
+
+$tempuser = $_SESSION["currUsername"];
+$listquery = "SELECT requestnum, owner, software, comments FROM ense470request WHERE isverified='0'";
+$listResult = $conn->query($listquery);
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +50,6 @@ elseif($_SESSION["currTier"] != 3){
       <li class="active"><a href="analystsplash.php">Pending Requests</a></li>
       <li><a href="approvedlist.php">Completed Requests</a></li>
       <li><a href="analystenter.php">Manual Entry</a></li>
-      <li><a href="#">Page 3</a></li>
     </ul>
   </div>
 </nav>
@@ -48,9 +60,18 @@ elseif($_SESSION["currTier"] != 3){
   <h3>List of Pre-Approved Software Requests</h3>
   <ul class="nav nav-pills nav-stacked">
     <li class="active"><a href="#">Home</a></li>
-    <li><a class="pills" href="#">Request 1</a></li>
-    <li><a class="pills" href="#">Request 2</a></li>
-    <li><a class="pills" data-toggle="modal" data-target="#myModal">Request 3</a></li>
+
+    <?php    
+    while($listRow = $listResult->fetch_assoc()){
+	
+        
+?>
+
+	<li><a id="<?php echo $listRow["requestnum"]; ?>" class="btn btn-info btn-xs view_data" > Request<?php echo $listRow["requestnum"]; ?></a></li>
+	
+<?php
+    }
+?>
   </ul>
 </div>
 
@@ -66,16 +87,14 @@ elseif($_SESSION["currTier"] != 3){
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Request 3</h4>
+        <h4 class="modal-title">Request</h4>
       </div>
-      <div class="modal-body">
-        <p>Request From: Tim</p>
-        <p>Software Requested: Web Utility Table</p>
-        <p>Successful Approval From: Dot Matricks</p>
+      <div class="modal-body" id="request_detail">
+        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#rejectmodal" data-dismiss="modal">Deny Request</button>
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#confirmmodal" data-dismiss="modal">Confirm Request</button>
+        <button type="button" class="btn btn-default pull-left deny" data-toggle="modal" data-target="#rejectmodal" data-dismiss="modal">Deny Request</button>
+        <button type="button" class="btn btn-default confirm" data-toggle="modal" data-target="#confirmmodal" data-dismiss="modal">Confirm Request</button>
       </div>
     </div>
 
@@ -83,6 +102,125 @@ elseif($_SESSION["currTier"] != 3){
 </div>
 
 
+
+
+
+
+
+<script>  
+ $(document).ready(function(){  
+    $('.view_data').click(function(){  
+           var anum = $(this).attr("id");  //right request number
+           $.ajax({  
+                url:"select.php",  
+                method:"post",  
+                data:{anum:anum},  
+                success:function(data){  
+                     $('#request_detail').html(data);  
+                     $('#myModal').modal("show");  
+                }  
+           });  
+      });  
+
+	  $('.confirm').click(function(){  
+      
+            var anum1 = 1;
+            
+
+           $.ajax({  
+                url:"select.php",  
+                method:"post",  
+                data:{anum1:anum1},  
+                success:function(data){  
+                     $('#confirm_detail').html(data);  
+                     $('#confirmmodal').modal("show");  
+                }  
+           });  
+      });
+      $('.rc').click(function(){  
+          
+           
+           var rc = 1;
+           $.ajax({  
+                url:"select.php",  
+                method:"post",  
+                data:
+                {
+                  
+                  rc:rc
+                
+
+                },  
+                success:function(data){  
+                  
+                  
+                }  
+           });  
+      });
+
+	  	  $('.deny').click(function(){  
+            
+            $.ajax({  
+                 url:"select.php",  
+                 method:"post",  
+                 data:{anum2:1},  
+                 success:function(data){  
+                      $('#rejection_detial').html(data);  
+                      $('#rejectmodal').modal("show");  
+                 }  
+            });  
+       });
+
+       $('.dc').click(function(){  
+          
+           
+          var dc = 1;
+          $.ajax({  
+               url:"select.php",  
+               method:"post",  
+               data:
+               {
+                 
+                 dc:dc
+               
+
+               },  
+               success:function(data){  
+                 
+                 
+               }  
+          });  
+     });
+
+     $('.yes').click(function(){  
+          
+           
+          var anum1 = 1;
+          $.ajax({  
+               url:"select.php",  
+               method:"post",  
+               data:
+               {
+                 
+                 anum1:anum1
+               
+
+               },  
+               success:function(data){  
+                 $('#confirm_detail').html(data);  
+                     $('#confirmmodal').modal("show");
+                 
+               }  
+          });  
+     });
+
+
+
+
+
+
+ });  
+ </script>
 
 
 
@@ -95,16 +233,16 @@ elseif($_SESSION["currTier"] != 3){
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Request 3</h4>
+        <h4 class="modal-title">Request</h4>
       </div>
-      <div class="modal-body">
-        <p>To approve the software request, please contact the approver.</p>
+      <div class="modal-body" id="confirm_detail">
+        <!-- <p>To approve the software request, please contact the approver.</p>
         <p>Approver Contact Information</p>
-        <div>Email: dot.matricks@hell.com<br>Phone: (888)555-4555<br></div>
+        <div>Email: dot.matricks@hell.com<br>Phone: (888)555-4555<br></div> -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#myModal" data-dismiss="modal">Go Back</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Request Confirm</button>
+        <button type="button" class="btn btn-default rc" data-dismiss="modal">Request Confirm</button>
       </div>
     </div>
 
@@ -121,16 +259,15 @@ elseif($_SESSION["currTier"] != 3){
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Request 3</h4>
+        <h4 class="modal-title">Request</h4>
       </div>
-      <div class="modal-body">
-        <p>You rejected the pre-approved request from Tim</p>
-        <p>Do you want to contact the approver?</p>
+      <div class="modal-body" id="rejection_detial">
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#myModal" data-dismiss="modal">Go Back</button>
-        <button type="button" class="btn btn-default pull-center" data-toggle="modal" data-target="#confirmmodal" data-dismiss="modal">Yes</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Reject</button>
+        <button type="button" class="btn btn-default pull-center yes" data-toggle="modal" data-target="#confirmmodal" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-default dc" data-dismiss="modal">Reject</button>
       </div>
     </div>
 

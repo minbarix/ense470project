@@ -9,6 +9,7 @@ elseif($_SESSION["currTier"] == 3){
 elseif($_SESSION["currTier"] != 2){
     header("Location: login.php");
 }
+$user = $_SESSION["currUsername"];
 
 
 
@@ -18,7 +19,7 @@ $conn = new mysqli("localhost","thoma26s","008096","thoma26s");
     }
 
 $tempuser = $_SESSION["currUsername"];
-$listquery = "SELECT requestnum, owner, software, comments FROM ense470request WHERE iscompleted='0'";
+$listquery = "SELECT requestnum, owner, software, comments FROM ense470request WHERE isapproved='0'";
 $listResult = $conn->query($listquery);
 
 ?>
@@ -52,11 +53,11 @@ $listResult = $conn->query($listquery);
 
 <?php    
     while($listRow = $listResult->fetch_assoc()){
-	
+      
         
 ?>
 
-	<li><a id="<?php echo $listRow["requestnum"]; ?>" class="btn btn-info btn-xs view_data" > Request<?php echo $listRow["requestnum"]; ?></a></li>;
+	<li><a id="<?php echo $listRow["requestnum"]; ?>" class="btn btn-info btn-xs view_data" > Request<?php echo $listRow["requestnum"]; ?></a></li>
 	
 <?php
     }
@@ -92,8 +93,8 @@ $listResult = $conn->query($listquery);
 
 <script>  
  $(document).ready(function(){  
-      $('.view_data').click(function(){  
-           var num = $(this).attr("id");  
+    $('.view_data').click(function(){  
+           var num = $(this).attr("id");  //right request number
            $.ajax({  
                 url:"select.php",  
                 method:"post",  
@@ -106,11 +107,14 @@ $listResult = $conn->query($listquery);
       });  
 
 	  $('.approve').click(function(){  
+      
+            var num1 = $('.accept').attr("value");
             
+
            $.ajax({  
                 url:"select.php",  
                 method:"post",  
-                data:{num1:3},  
+                data:{num1:num1},  
                 success:function(data){  
                      $('#approvel_detail').html(data);  
                      $('#approvemodal').modal("show");  
@@ -133,25 +137,33 @@ $listResult = $conn->query($listquery);
 
 
 	  $('.accept').click(function(){  
-           var num2 = $('.view_data').attr("id");
+          //var num2 = $('.view_data').click(function()).attr("id");
+           
+           var user = $('.accept').attr("value");
            $.ajax({  
                 url:"select.php",  
                 method:"post",  
-                data:{num2:num2},  
+                data:
+                {
+                  
+                  user:user
+                
+
+                },  
                 success:function(data){  
                   
-                     
+                  
                 }  
            });  
       });
 
 
 	  $('.acceptreject').click(function(){  
-           var num3 = $('.view_data').attr("id");
+      var user1 = $('.acceptreject').attr("value");
            $.ajax({  
                 url:"select.php",  
                 method:"post",  
-                data:{num3:num3},  
+                data:{user1:user1},  
                 success:function(data){  
                   
                     
@@ -191,7 +203,7 @@ $listResult = $conn->query($listquery);
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#myModal" data-dismiss="modal">Go Back</button>
-        <button type="button" id="<?php echo $listRow["requestnum"]; ?>" class="btn btn-default accept" data-dismiss="modal">Accept</button>
+        <button type="button"  value = "<?php echo $user; ?>" id="<?php echo $listRow["requestnum"]; ?>" class="btn btn-default accept" data-dismiss="modal">Accept</button>
       </div>
     </div>
 
@@ -211,14 +223,14 @@ $listResult = $conn->query($listquery);
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Request 3</h4>
+        <h4 class="modal-title">Request</h4>
       </div>
       <div class="modal-body" id="rejection_detial">
         
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#myModal" data-dismiss="modal">Go Back</button>
-        <button type="button" class="btn btn-default acceptreject" data-dismiss="modal">Accept</button>
+        <button type="button" value = "<?php echo $user; ?>" class="btn btn-default acceptreject" data-dismiss="modal">Accept</button>
       </div>
     </div>
 
